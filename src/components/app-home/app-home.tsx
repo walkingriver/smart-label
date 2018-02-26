@@ -22,6 +22,10 @@ export class AppHome {
             Profile page
           </button>
         </stencil-route-link>
+
+        <smart-label alt-text="Copy" text="    Mike was Here   "></smart-label>
+        <smart-label alt-text="Copy" text="    Mike was There   "></smart-label>
+        <smart-label alt-text="Copy" text="    Mike was Everywhere   "></smart-label>
       </div>
     );
   }

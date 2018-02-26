@@ -4,6 +4,8 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
+import '@stencil/router';
+
 import {
   MatchResults,
 } from '@stencil/router';
@@ -102,6 +104,37 @@ declare global {
   namespace JSXElements {
     export interface MyAppAttributes extends HTMLAttributes {
       
+    }
+  }
+}
+
+
+import {
+  SmartLabel as SmartLabel
+} from './components/smart-label/smart-label';
+
+declare global {
+  interface HTMLSmartLabelElement extends SmartLabel, HTMLStencilElement {
+  }
+  var HTMLSmartLabelElement: {
+    prototype: HTMLSmartLabelElement;
+    new (): HTMLSmartLabelElement;
+  };
+  interface HTMLElementTagNameMap {
+    "smart-label": HTMLSmartLabelElement;
+  }
+  interface ElementTagNameMap {
+    "smart-label": HTMLSmartLabelElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "smart-label": JSXElements.SmartLabelAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface SmartLabelAttributes extends HTMLAttributes {
+      altText?: any;
+      text?: any;
     }
   }
 }

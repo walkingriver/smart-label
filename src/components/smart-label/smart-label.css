@@ -1,0 +1,22 @@
+
+a.smart-label-copy img {
+    height: 0.8em;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    visibility: hidden;
+}
+
+smart-label:hover a.smart-label-copy img {
+    visibility: inherit;
+}
+
+.smart-label-shadow-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0%;
+  top: -4000px;
+  left: -4000px;
+}
